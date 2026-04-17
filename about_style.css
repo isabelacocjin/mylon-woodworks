@@ -1,0 +1,210 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes slidefadeAnimation {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Background by SVGBackgrounds.com */
+body{
+    background-color: #FFFFFF;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%2376ebe9' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23fbea71' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2384dfb5' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ffcb65' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23a7ce83' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23ffac66' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23ccb661' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ff8e71' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23ea995e' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23fa757f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23f97b79' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23e2628e' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.about-wrapper {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-container {
+    font-family: 'Montserrat', sans-serif;
+    color: #212121;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+    justify-items: stretch;
+    
+    max-width: 1200px;
+    margin: 0px auto;
+
+    padding: 0 20px;
+
+    animation-name: slidefadeAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+
+.about-text {
+    background-color: #fcd0b5;
+    padding: 20px;
+    border-radius: 12px;
+    line-height: 1.5;
+    font-size: 14px;
+
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-text h2 {
+    color: #c25c02;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    align-self: stretch;
+}
+
+.about-text p {
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #212121;
+    margin: 15px 0;
+}
+
+.about-image{
+    align-self: stretch;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.mv-section {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.mv-head{
+    font-size: 15px;
+    color: #c25c02;
+}
+
+.mv-content {
+    max-height: 130px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #ffe9dc;
+    border-radius: 10px;
+    margin-top: 8px;
+    padding: 15px 15px 15px 15px;
+}
+
+.mv-content::-webkit-scrollbar {
+    display: none;
+}
+
+.mv-item {
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.mv-content p {
+    max-height: none;
+    overflow: visible;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+
+    .about-wrapper {
+        padding: 10px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-text {
+        font-size: 13px;
+        line-height: 1.45;
+        padding: 15px;
+    }
+
+    .about-text h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .about-text p {
+        margin-bottom: 10px;
+    }
+
+    .about-text hr{
+        margin: 12px 0;
+    }
+
+    .about-image{
+        display: none;
+    }
+
+    .mv-section {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .mv-head {
+        cursor: pointer;
+        position: relative;
+        padding-right: 20px;
+    }
+
+    .mv-head::after {
+        content: "+";
+        position: absolute;
+        right: 0;
+        font-size: 18px;
+    }
+
+    .mv-head.active::after {
+        content: "−";
+    }
+
+    .mv-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+
+        background: #ffe9dc;
+        border-radius: 10px;
+        margin-top: 6px;
+
+        padding: 0, 12px;
+    }
+
+    .mv-content p {
+        margin: 0;
+        padding: 12px 0;
+    }
+}
+

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes slidefadeAnimation {
+        from {
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+.contacts {
+    background: #ffffff;
+    border: 20px solid #fcd0b5;
+    border-radius: 20px;
+
+    padding: 30px;
+    width: 1000px;
+
+    margin: 80px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    animation-name: slidefadeAnimation;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: 1;
+    
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+
+.contacts-qr {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts-qr img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+@font-face { font-family: 'Mont';
+    src: url('fonts/Mont-HeavyDEMO.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal; }
+
+
+/* Background by SVGBackgrounds.com */
+body{
+    background-color: #FFFFFF;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%2376ebe9' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23fbea71' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2384dfb5' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ffcb65' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23a7ce83' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23ffac66' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23ccb661' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ff8e71' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23ea995e' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23fa757f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23f97b79' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23e2628e' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+.logo-text a {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    align-items: center;
+    font-size: 30px; 
+    color: #c25c02;
+    margin-bottom: 10px;
+    gap: 10px; 
+    line-height: 1.5;
+}
+
+.logo-text a:hover {
+    text-decoration: none !important;
+}
+
+.logo-text a:hover span {
+    text-decoration: underline;
+}
+
+.header {
+    color: #c25c02;
+    font-family: 'Mont', sans-serif;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+    margin-left: 10px;
+}
+
+
+@media (max-width: 768px) {
+    
+    .contacts {
+        flex-direction: column; 
+        width: 95%;
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 20px 15px;
+        border-width: 10px;
+        box-sizing: border-box;
+        gap: 30px;
+    }
+
+    .text-section {
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .header {
+        font-size: 1.8rem;
+        padding-right: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .logo-text {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo-text a {
+        font-size: 18px;
+        width: 100%;
+        justify-content: center;
+        
+        word-break: break-all;      
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+
+    .logo-text i {
+        font-size: 22px;
+        flex-shrink: 0;
+    }
+
+    .contacts-qr {
+        flex-direction: row;    
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .contacts-qr img {
+        width: 150px;
+        max-width: 45%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts-qr {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .contacts-qr img {
+        width: 200px;
+        max-width: 80%;
+    }
+
+    .logo-text a {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 340px) {
+    
+    .contacts {
+        padding: 20px 8px;
+        border-width: 6px;
+    }
+
+    .logo-text a {
+        font-size: 14px;
+        gap: 6px;
+        white-space: nowrap;
+        letter-spacing: -0.2px;
+    }
+
+    .logo-text i {
+        font-size: 16px;
+    }
+
+    .header {
+        font-size: 1.4rem;
+    }
+
+    .contacts-qr img {
+        width: 150px;
+    }
+}

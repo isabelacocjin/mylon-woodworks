@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+    body{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    footer{
+        font-family: 'Montserrat', sans-serif;
+        margin-top: auto;
+	    display: flex;
+        padding: 10px;
+
+        background-color: rgba(255, 210, 190, 0.65) ;
+    }
+
+    i{
+	    font-size: 35px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	    margin-left: 20px;
+	    margin-right: 20px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .fa-facebook {
+        color: #1876f0;
+    }
+
+    .fa-instagram {
+        color: #DD2A7b;
+    }
+
+    .fa-tiktok {
+        color: black;
+    }
+
+    .fa-envelope {
+        color: #ffa700;
+    }
+
+    .fa-phone {
+        color: #35cf4f;
+    }
+
+    .links {
+        text-decoration: none;
+        color: black;
+    }
+
+    .links:hover {
+        color: #cf4200;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    i:hover{
+	    color: #cf4200;
+    }
+
+
+    @media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 40px 10px;
+    }
+
+    .social-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    i {
+        margin: 0; 
+        font-size: 32px;
+    }
+
+    .links {
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+}
