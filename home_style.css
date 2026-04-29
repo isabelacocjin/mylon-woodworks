@@ -127,7 +127,6 @@
         flex: 0 0 741px;
         width: 741px;
         height: 600px;
-        
         animation-name: slidefadeAnimation;
         animation-duration: 0.5s;
         animation-timing-function: ease-out;
@@ -138,31 +137,48 @@
         position: absolute;
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
         justify-content: center;
-        transition: transform 0.4s ease-out, background-color 0.4s ease-out, box-shadow 0.4s ease-out; z-index: 0;
+        /* Added border-color to the transition below */
+        transition: transform 0.4s ease-out, background-color 0.4s ease-out, box-shadow 0.4s ease-out, border-color 0.4s ease-out; 
+        z-index: 0;
     }
 
     .photo img {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: auto;
-        display: block;
-        justify-content: center;
+        opacity: 0;
+        height: 100%;           /* Add this */
+        object-fit: cover;      /* Add this to prevent stretching */
+        transition: opacity 1s ease-in-out;
     }
 
-    .photo img:hover, .yellow:hover, .orange:hover {
-        transform: scale(1.1) rotate(2deg);
+    .photo img.active {
+        opacity: 1;
+    }
+    
+    /* This covers the yellow and orange boxes */
+    .photo:hover {
         z-index: 100 !important;
+        border-color: transparent !important;
+    }
+
+    /* Specific rotation for yellow and orange */
+    .yellow:hover, .orange:hover {
+        transform: scale(1.1) rotate(2deg);
         box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.6);
     }
 
+    /* Specific rotation for pink */
     .pink:hover {
         transform: scale(1.1) rotate(-5deg);
-        z-index: 100 !important;
         box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.6);
     }
 
     .pink{
         border: 7px solid #E25990;
         width: 460px;
+        aspect-ratio: 4 / 3;    /* Add this for a landscape rectangle */
         bottom: 280px;
         left: 150px;
         z-index: 2;
@@ -171,6 +187,8 @@
     .yellow{
         border: 7px solid #F4B64E;
         width: 300px;
+        height: 400px;
+        aspect-ratio: 4 / 3;    /* Add this for a landscape rectangle */
         bottom: 30px;
         z-index: 1;
     }
@@ -178,6 +196,7 @@
     .orange{
         border: 7px solid #F6985F;
         width: 310px;
+        aspect-ratio: 3 / 4;    /* Add this for a landscape rectangle */
         bottom: -40px;
         left: 380px;
         z-index: 3;
@@ -226,8 +245,9 @@
         height: auto;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         align-items: center;
+        bottom: 25px;
     }
 
     .photo {
@@ -241,10 +261,11 @@
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
     }
 
-    .photo img:hover, .pink:hover, .yellow:hover, .orange:hover {
+    .photo:hover, .pink:hover, .yellow:hover, .orange:hover {
         transform: scale(1.1);
         z-index: 100 !important;
         box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.3);
+        border-color: transparent !important; /* Adds the border fade for mobile */
     }
 
     
@@ -294,18 +315,16 @@
 
     .collage {
         margin-top: 50px;
-        transform: scale(0.8);
         transform-origin: center;
         flex: none;
         width: 100%;
         display: flex;
         justify-content: center;
-        height: 600px;
+        height: 500px;
     }
 
     .pink { 
-        left: 50%; 
-        transform: translateX(-50%) translateY(-50px); 
+        left: 30%;
     }
 
     .yellow { 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="footer_style.css">
     <script src="https://kit.fontawesome.com/eb58d2605a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image" href="images/logo-no-text.png">
+    <script src="contact_dropdown.js" defer></script>
 
 </head>
 <body class="contact-page">
@@ -27,59 +28,97 @@
             </div>
         </div>
     </header>
+    
+
 
     <div class="contacts">
-        
-            
+        <h2 class="header">Contact Us</h2>
 
-        <div class="text-section">
-            <h2 class="header">Contact Us</h2>
+<div class="contact-content">
+        <!-- CONTACT FORM -->
+        <div class="contact-form">
+        <form>
+            <input type="text" placeholder="Name" pattern="[A-Za-z\s]{1,32}" required>
 
-            <div class="logo-text">
-                <a href="https://www.facebook.com/MylonWoodworks" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-                    <span>facebook.com/MylonWoodworks</span>
-            </a>
+            <input type="email" placeholder="Email" 
+                pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" required>
+
+            <input type="tel" name="phone" pattern="[0-9]{10,11}" maxlength="11"
+                placeholder="Mobile Number (09xxxxxxxxx)" required>
+
+            <div class="dropdown">
+                <select name="project" id="projectSelect" required>
+                    <option value="" disabled selected>Select a Project</option>
+                    <option value="dining-table">Table</option>
+                    <option value="coffee-table">Shelves</option>
+                    <option value="bed-frame">TV Stand</option>
+                    <option value="cabinet">Cabinet</option>
+                    <option value="tv-stand">Bed Frame</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <textarea id="otherMessage"
+                    placeholder="Please describe your project..."
+                    style="display:none; margin-top:10px; width:100%; border-radius:5px;">
+                </textarea>
             </div>
 
-            <div class="logo-text">
-                <a href="https://www.tiktok.com/@mylon.woodworks" target="_blank">
-                <i class="fa-brands fa-tiktok"></i>
-                    <span>@mylon.woodworks</span>
-            </a>
-            </div>
-
-            <div class="logo-text">
-                <a href="https://www.instagram.com/mylonwoodworks" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-                    <span>@mylonwoodworks</span>
-            </a>
-            </div>
-            
-            <div class="logo-text">
-                <a href="mailto:mylonwoodworks@gmail.com" target="_blank">
-                <i class="fa-solid fa-envelope"></i>
-                    <span>mylonwoodworks@gmail.com</span>
-            </a>
-            </div>
-
-            <div class="logo-text">
-                <a href="tel:+639664004402" target="_blank">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>0966 400 4402</span>
-                </a>
-        </div>
+            <button type="submit">Send</button>
+        </form>
     </div>
+
+        <!--CONTACT US-->
+        <div class="text-section">
+    
+
+    <!-- SOCIALS -->
+    <div class="logo-text">
+        <a href="https://www.facebook.com/MylonWoodworks" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+            <span>facebook.com/MylonWoodworks</span>
+        </a>
+    </div>
+
+    <div class="logo-text">
+        <a href="https://www.tiktok.com/@mylon.woodworks" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+            <span>@mylon.woodworks</span>
+        </a>
+    </div>
+
+    <div class="logo-text">
+        <a href="https://www.instagram.com/mylonwoodworks" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+            <span>@mylonwoodworks</span>
+        </a>
+    </div>
+
+    <div class="logo-text">
+        <a href="mailto:mylonwoodworks@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
+            <span>mylonwoodworks@gmail.com</span>
+        </a>
+    </div>
+
+    <div class="logo-text">
+        <a href="tel:+639664004402" target="_blank">
+            <i class="fa-solid fa-phone"></i>
+            <span>0966 400 4402</span>
+        </a>
+    </div>
+</div>
 
         
     
         <div class="contacts-qr">
-            <img src="images/contact/tiktok-qr.png" alt="Mylon Woodworks TikTok QR Code">
-            <img src="images/contact/instagram-qr.png" alt="Mylon Woodworks Instagram QR Code">
+            <img src="https://file.garden/aYC8ZhqIC3TWlhBw/tiktok-qr.png" alt="Mylon Woodworks TikTok QR Code">
+            <img src="https://file.garden/aYC8ZhqIC3TWlhBw/instagram-qr.png" alt="Mylon Woodworks Instagram QR Code">
 
-        
+        </div>
         </div>
     </div>
+
+        
     
 
         

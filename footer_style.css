@@ -13,8 +13,8 @@
         margin-top: auto;
 	    display: flex;
         padding: 10px;
-
-        background-color: rgba(255, 210, 190, 0.65) ;
+        gap: 15px;
+        background-color: rgba(255, 206, 185, 0.65) ;
     }
 
     i{
@@ -25,6 +25,7 @@
         transition: background-color 0.3s ease-in-out;
     }
 
+  
     .fa-facebook {
         color: #1876f0;
     }
@@ -45,19 +46,47 @@
         color: #35cf4f;
     }
 
+    .contact-container {
+        display: flex;
+        justify-content: left;
+        gap: 40px;
+        align-items: center;
+    }
+
     .links {
+        display: inline-flex;
+        align-items: center;
         text-decoration: none;
         color: black;
     }
 
+    .links span {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links span::after {
+        content: attr(data-text);
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+        font-weight: bold;
+    }
+
     .links:hover {
-        color: #cf4200;
-        text-decoration: underline;
+        color: #D26E43;
+        text-decoration: none;
+    }
+
+    .links:hover span {
         font-weight: bold;
     }
 
     i:hover{
-	    color: #cf4200;
+	    color: #D26E43;
     }
 
 
@@ -74,7 +103,13 @@
         justify-content: center;
         gap: 30px;
         width: 100%;
-        margin-bottom: 10px;
+
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
     }
 
     i {
