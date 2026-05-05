@@ -55,7 +55,9 @@ body{
     padding: 20px;
     border-radius: 12px;
     line-height: 1.5;
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 
     justify-content: space-between;
     display: flex;
@@ -64,14 +66,14 @@ body{
 
 .about-text h2 {
     color: #c25c02;
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 10px;
 
     align-self: stretch;
 }
 
 .about-text p {
-    margin-bottom: 10px;
+    margin-bottom: auto;
 }
 
 hr {
@@ -83,6 +85,8 @@ hr {
 
 .about-image{
     align-self: stretch;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .about-image img {
@@ -96,7 +100,7 @@ hr {
 
 .mv-head{
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 20px;
     color: #c25c02;
 }
 
@@ -124,7 +128,7 @@ hr {
     max-height: none;
     overflow: visible;
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -185,7 +189,7 @@ hr {
     }
 
     .about-text {
-        font-size: 13px;
+        font-size: 15px;
         line-height: 1.45;
         padding: 15px;
     }
@@ -196,7 +200,7 @@ hr {
     }
 
     .about-text p {
-        margin-bottom: 10px;
+        margin-bottom: auto;
     }
 
     .about-text hr{
@@ -243,6 +247,7 @@ hr {
     }
 
     .mv-content p {
+        font-size: 15px;
         margin: 0;
         padding: 12px 0;
     }

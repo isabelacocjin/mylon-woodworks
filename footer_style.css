@@ -2,6 +2,7 @@
 
 
     body{
+        
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -9,6 +10,7 @@
 
 
     footer{
+
         font-family: 'Montserrat', sans-serif;
         margin-top: auto;
 	    display: flex;
@@ -31,6 +33,7 @@
     }
 
     .fa-instagram {
+        font-size: 38px;
         color: #DD2A7b;
     }
 
@@ -77,18 +80,13 @@
     }
 
     .links:hover {
-        color: #D26E43;
+        color: #b43f10;
         text-decoration: none;
     }
 
-    .links:hover span {
-        font-weight: bold;
-    }
-
     i:hover{
-	    color: #D26E43;
+	    color: #b43f10;
     }
-
 
     @media (max-width: 768px) {
     footer {

@@ -116,7 +116,8 @@ body {
 }
 
 .logo-text a:hover span {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #b43f10;
 }
 
 .logo-text i {

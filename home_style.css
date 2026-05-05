@@ -82,13 +82,13 @@
     }
 
     #goal {
+        margin-bottom: auto;
         align-items: center;
         justify-content: center;  
         text-align: justify;
         font-style: normal;
         font-size: 1rem;
         line-height: 1.3;
-
     }
 
     .buttons {
@@ -116,6 +116,7 @@
     }
 
     .btn-custom:hover {
+        text-decoration: none;
         background-color: #D26E43;
         color: white;
         transform: scale(1.1);
@@ -137,7 +138,6 @@
         position: absolute;
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
         justify-content: center;
-        /* Added border-color to the transition below */
         transition: transform 0.4s ease-out, background-color 0.4s ease-out, box-shadow 0.4s ease-out, border-color 0.4s ease-out; 
         z-index: 0;
     }
