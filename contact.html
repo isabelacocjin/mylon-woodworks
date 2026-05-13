@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="footer_style.css">
     <script src="https://kit.fontawesome.com/eb58d2605a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image" href="images/logo-no-text.png">
-    <script src="contact_dropdown.js" defer></script>
+    <script src="contact_form.js" defer></script>
 
 </head>
 <body class="contact-page">
@@ -35,88 +35,133 @@
         <h2 class="header">Contact Us</h2>
 
 <div class="contact-content">
-        <!-- CONTACT FORM -->
-        <div class="contact-form">
-        <form>
-            <input type="text" placeholder="Name" pattern="[A-Za-z\s]{1,32}" required>
 
-            <input type="email" placeholder="Email" 
-                pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" required>
+    <!-- TOP SECTION -->
+    <div class="top-contact-section">
 
-            <input type="tel" name="phone" pattern="[0-9]{10,11}" maxlength="11"
-                placeholder="Mobile Number (09xxxxxxxxx)" required>
+        <!-- SOCIAL INFO -->
+        <div class="text-section">
 
-            <div class="dropdown">
-                <select name="project" id="projectSelect" required>
-                    <option value="" disabled selected>Select a Project</option>
-                    <option value="dining-table">Table</option>
-                    <option value="coffee-table">Shelves</option>
-                    <option value="bed-frame">TV Stand</option>
-                    <option value="cabinet">Cabinet</option>
-                    <option value="tv-stand">Bed Frame</option>
-                    <option value="other">Other</option>
-                </select>
-
-                <textarea id="otherMessage"
-                    placeholder="Please describe your project..."
-                    style="display:none; margin-top:10px; width:100%; border-radius:5px;">
-                </textarea>
+            <div class="logo-text">
+                <a href="https://www.facebook.com/MylonWoodworks" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span>facebook.com/MylonWoodworks</span>
+                </a>
             </div>
 
-            <button type="submit">Send</button>
-        </form>
+            <div class="logo-text">
+                <a href="https://www.tiktok.com/@mylon.woodworks" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                    <span>@mylon.woodworks</span>
+                </a>
+            </div>
+
+            <div class="logo-text">
+                <a href="https://www.instagram.com/mylonwoodworks" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@mylonwoodworks</span>
+                </a>
+            </div>
+
+            <div class="logo-text">
+                <a href="mailto:mylonwoodworks@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>mylonwoodworks@gmail.com</span>
+                </a>
+            </div>
+
+            <div class="logo-text">
+                <a href="tel:+639664004402" target="_blank">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>0966 400 4402</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- QR CODES -->
+        <div class="contacts-qr">
+            <img src="https://file.garden/aYC8ZhqIC3TWlhBw/tiktok-qr.png" alt="TikTok QR">
+            <img src="https://file.garden/aYC8ZhqIC3TWlhBw/instagram-qr.png" alt="Instagram QR">
+        </div>
+
     </div>
 
-        <!--CONTACT US-->
-        <div class="text-section">
-    
+    <!-- FORM SECTION -->
+    <div class="contact-form-wrapper">
 
-    <!-- SOCIALS -->
-    <div class="logo-text">
-        <a href="https://www.facebook.com/MylonWoodworks" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-            <span>facebook.com/MylonWoodworks</span>
-        </a>
+        <h3 class="header">Send Us a Message</h3>
+
+        <div class="contact-form">
+            <form>
+
+                
+
+                <input type="text" id="nameInput" placeholder="Name" required>
+
+                <input type="email" placeholder="Email"
+                    pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com)$" required>
+
+                <input type="tel" id="phoneInput" maxlength="11"
+                    placeholder="Mobile Number (09xxxxxxxxx)" required>
+
+
+            <!-- CHECKBOXES -->
+                <div class="project-checkboxes">
+
+                    <p class="project-title">Select Project/s</p>
+
+                    <label><input type="checkbox"> Food Kiosk & Food Carts</label>
+                    <label><input type="checkbox"> Wardrobe Cabinets</label>
+                    <label><input type="checkbox"> Bed Frames</label>
+                    <label><input type="checkbox"> Media Consoles</label>
+                    <label><input type="checkbox"> Loft Beds</label>
+                    <label><input type="checkbox"> Kitchen Renovation</label>
+                    <label><input type="checkbox"> Under-Stairs Storage</label>
+                    <label><input type="checkbox"> Tile & Stone Works</label>
+                    <label><input type="checkbox"> Metal Work</label>
+                    <label><input type="checkbox"> Roofing</label>
+                    <label>
+                    <input type="checkbox" id="otherServices">
+                    Other Services
+                    </label>
+
+                        <input 
+                            type="text" 
+                            id="otherText" 
+                            placeholder="Please specify other service"
+                            style="display: none; margin-top: 10px;"
+                        >
+
+                </div>
+
+                <button type="submit">Send</button>
+
+            </form>
+        </div>
+
     </div>
 
-    <div class="logo-text">
-        <a href="https://www.tiktok.com/@mylon.woodworks" target="_blank">
-            <i class="fa-brands fa-tiktok"></i>
-            <span>@mylon.woodworks</span>
-        </a>
-    </div>
-
-    <div class="logo-text">
-        <a href="https://www.instagram.com/mylonwoodworks" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-            <span>@mylonwoodworks</span>
-        </a>
-    </div>
-
-    <div class="logo-text">
-        <a href="mailto:mylonwoodworks@gmail.com" target="_blank">
-            <i class="fa-solid fa-envelope"></i>
-            <span>mylonwoodworks@gmail.com</span>
-        </a>
-    </div>
-
-    <div class="logo-text">
-        <a href="tel:+639664004402" target="_blank">
-            <i class="fa-solid fa-phone"></i>
-            <span>0966 400 4402</span>
-        </a>
-    </div>
 </div>
 
-        
-    
-        <div class="contacts-qr">
-            <img src="https://file.garden/aYC8ZhqIC3TWlhBw/tiktok-qr.png" alt="Mylon Woodworks TikTok QR Code">
-            <img src="https://file.garden/aYC8ZhqIC3TWlhBw/instagram-qr.png" alt="Mylon Woodworks Instagram QR Code">
+<!-- APPOINTMENT SECTION -->
+<div class="appointment-section">
 
-        </div>
-        </div>
-    </div>
+    <p class="project-title">Book an Appointment</p>
+
+    <label for="appointmentDate">Select Date</label>
+    <input type="date" id="appointmentDate" required>
+
+    <label for="appointmentTime">Select Time</label>
+    <input type="time" id="appointmentTime" required>
+
+    <textarea 
+        id="appointmentNotes"
+        rows="4"
+        placeholder="Additional notes or preferred meeting details">
+    </textarea>
+
+</div>
 
         
     

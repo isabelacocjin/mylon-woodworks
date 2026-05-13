@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="footer_style.css">
     <script src="https://kit.fontawesome.com/eb58d2605a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image" href="images/logo-no-text.png">
+    <script src="about_toggles_mobile.js" defer></script>
 </head>
 <body>
 
@@ -58,50 +59,154 @@
             </div>
 
             <div class="about-image">
-                <img src="images/about sample.jpg" alt="sample-image1">
+                <img src="images/about sample.jpg" alt="Hallway to Staff Room and Head Spa Room">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="process-wrapper">
+        <div class="process-container">
+            <div class="process-section">
+                <h2>Our Process</h2>
+                    <div class="process-image">
+                        <img src="images/process.png" alt="Progress Diagram">
+                    </div>
+                <p>
+                    Our process ensures that every project is transparent, well-planned, and executed with care, giving clients peace of mind while reflecting the principles that define Mylon Woodworks. Our communications do not stop when we finish the job. To ensure our clients get value for their money, we keep our lines open for any issues that they may encounter after the completion and turn-over of the project as part of our commitment to customer satisfaction and excellence.
+                </p>
             </div>
         </div>
     </div>
 
-    <script>
-        function toggleMV(header) {
-            if (window.innerWidth > 768) return;
+    <div class="accomplishments-wrapper">
+        <div class="accomplishments-container">
+            <div class="accomplishments-section">
+                <h2>Notable Accomplishments</h2>
+                    <div class="accomplishment-content">
+                        <div class="accomplishment-item">
+                        <p>
+                            Successfully completed multiple home renovations in Antipolo, Angono, and Sta. Rosa Laguna <br>
+                        </p>
+                        <div class="accomplishment-collage1">
+                        <img src="images/accomplishments/acommplisment-1.1.jpg" alt="Accomplishments Collage 1.1">
+                        <img src="images/accomplishments/acommplisment-1.2.jpg" alt="Accomplishments Collage 1.2">
+                        <img src="images/accomplishments/acommplisment-1.3.jpg" alt="Accomplishments Collage 1.3">
+                        <img src="images/accomplishments/acommplisment-1.4.jpg" alt="Accomplishments Collage 1.4">
+                        </div>
+                        </div>
 
-        const content = header.nextElementSibling;
+                        <div class="accomplishment-item">
+                        <p> 
+                            Featured and interviewed live on “Home Eco Nanay” in Radyo Pilipinas (now Radyo Magasin 1278 AM) in June 2023 <br>
+                        </p>
+                        <div class="accomplishment-collage2">
+                        <img src="images/accomplishments/acommplisment-2.1.png" alt="Accomplishments Collage 2.1">
+                        <img src="images/accomplishments/acommplisment-2.2.png" alt="Accomplishments Collage 2.2">
+                        </div>
 
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-            header.classList.remove("active");
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-            header.classList.add("active");
-        }
-    }
+                        <!--FOR MOBILE-->
+                        <div class="accomplishment-collage2-mobile">
+                        <img src="images/accomplishments/acommplisment-2.2.png" alt="Accomplishments Collage 2.1">
+                        <img src="images/accomplishments/acommplisment-2.2-mobile.jpg" alt="Accomplishments Collage 2.2">
+                        </div>
+                        </div>
 
-        document.querySelectorAll(".mv-head").forEach(head => {
-            head.addEventListener("click", function () {
-            toggleMV(this);
-            });
-        });
-    </script>
+                        <div class="accomplishment-item">
+                        <p>
+                            Provided craftsmanship and construction services to several well-known businesses in the city <br>
+                        </p>
+                        <div class="accomplishment-collage3">
+                        <img src="images/accomplishments/acommplisment-3.1.jpg" alt="Accomplishments Collage 3.1">
+                        <img src="images/accomplishments/acommplisment-3.2.jpg" alt="Accomplishments Collage 3.2">
+                        <img src="images/accomplishments/acommplisment-3.3.jpg" alt="Accomplishments Collage 3.3">
+                        <img src="images/accomplishments/acommplisment-3.4.jpg" alt="Accomplishments Collage 3.4">
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        <div class="social-container">
+    <div class="feedback-wrapper">
+        <div class="feedback-container">
+            <div class="feedback-section">
+                <h2>Client Feedbacks</h2>
+                    <div class="feedback-content">
+                        <div class="feedback-group1">
+                        <img src="images/feedbacks/feedback1.jpg" alt="Feedback 1">
+                        <img src="images/feedbacks/feedback2.jpg" alt="Feedback 2">
+                        <img src="images/feedbacks/feedback3.jpg" alt="Feedback 3">
+                        </div>
+
+                        <div class="feedback-group1-mobile"> <!--FOR MOBILE FEEDBACKS-->
+                        <img src="images/feedbacks/feedback1(m).jpg" alt="Feedback 1">
+                        <img src="images/feedbacks/feedback2(m).jpg" alt="Feedback 2">
+                        <img src="images/feedbacks/feedback3(m).jpg" alt="Feedback 3">
+                        </div>
+
+                        <div class="feedback-group2">
+                        <img src="images/feedbacks/feedback4.jpg" alt="Feedback 4">
+                        <img src="images/feedbacks/feedback5.jpg" alt="Feedback 5">
+                        <img src="images/feedbacks/feedback6.jpg" alt="Feedback 6">
+                        <img src="images/feedbacks/feedback7.jpg" alt="Feedback 7">
+                        <img src="images/feedbacks/feedback8.jpg" alt="Feedback 8">
+                        </div>
+
+                        <div class="feedback-group2-mobile"> <!--FOR MOBILE FEEDBACKS-->
+                        <img src="images/feedbacks/feedback4(m).jpg" alt="Feedback 4">
+                        <img src="images/feedbacks/feedback5(m).jpg" alt="Feedback 5">
+                        <img src="images/feedbacks/feedback6(m).jpg" alt="Feedback 6">
+                        <img src="images/feedbacks/feedback7(m).jpg" alt="Feedback 7">
+                        <img src="images/feedbacks/feedback8(m).jpg" alt="Feedback 8">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="footer">
+    <div class="footer-top">
+
+        <div class="footer-logo">
+            <h2>MYLON WOODWORKS</h2>
+            <p>Making Woodwork Work Wonders for Your Home.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#gallery">GALLERY</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+
+        <div class="social-icons">
             <a href="https://www.facebook.com/MylonWoodworks" target="_blank">
-                <i class="fa-brands fa-facebook"></i></a>
+            <i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.instagram.com/mylonwoodworks" target="_blank">
-                <i class="fa-brands fa-instagram"></i></a>
+            <i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@mylon.woodworks" target="_blank">
-                <i class="fa-brands fa-tiktok"></i></a>
+            <i class="fa-brands fa-tiktok"></i></a>
         </div>
 
-        <div class="contact-container">
-            <a href="mailto:mylonwoodworks@gmail.com" target="_blank" class="links">
-                <i class="fa-solid fa-envelope"></i><span data-text="mylonwoodworks@gmail.com">mylonwoodworks@gmail.com</span></a>  
-            <a href="tel:+639664004402" target="_blank" class="links">
-                <i class="fa-solid fa-phone"></i><span data-text="0966 400 4402">0966 400 4402</span></a>
-        </div>
-    </footer>
+
+        <a href="mailto:mylonwoodworks@gmail.com" target="_blank" class="links">
+        <p class="footer-email">mylonwoodworks@gmail.com</p></a>
+
+        <a href="tel:+639664004402" target="_blank" class="links">
+            <p>0966 400 4402</p>
+        </a>
+        
+
+    </div>
+</footer>
+    
 
 </body>
 </html>

@@ -100,7 +100,6 @@ li a{
     margin-right: 10px;
 }
 
-/* ANIMATION */
 .navdiv ul li a {
   position: relative;
 }
@@ -119,8 +118,6 @@ li a{
 .navdiv ul li a:hover::after {
   width: 100%;
 }
-/* ANIMATION END */
-
 .container-nav{
     max-width: 2000px;
     margin: 0 auto;

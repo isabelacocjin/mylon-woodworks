@@ -4,6 +4,8 @@
     font-weight: normal;
     font-style: normal; }
 
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @keyframes slidefadeAnimation {
     from {
         transform: translateY(30px);
@@ -23,91 +25,151 @@ body{
     
 }
 
-.projects {
-    background: #fcd0b5;
-    padding: 20px;
-    border-radius: 20px;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: fit-content;
-    margin: 40px auto;
+.project-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 20px;
+    margin-top: 40px; 
+}
 
+.project-container {
+    max-width: 1200px;
+    width: 100%;
     animation-name: slidefadeAnimation;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
 }
 
+.project-section {
+    background-color: #fcd0b5;
+    padding: 40px;
+    border-radius: 12px;
+    color: #212121;
+    font-family: 'Montserrat', sans-serif;
+}
 
-.section-title {
+.project-section h2 {
     color: #c25c02;
-    font-family: 'Mont', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.project-content1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.project-content2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+
+.project-item {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #ffe9dc;
+    padding: 15px 15px 15px 15px;
     align-items: center;
-    cursor: pointer;
-    position: relative;
-    padding-right: 20px;
+}
+
+.project-item p {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    line-height: 1;
+    flex-grow: 1;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    aspect-ratio: 3 / 4;
+}
+
+.project-item img:hover {
+    transform: scale(1.1);
+    z-index: 100 !important;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 
-.project-pics {
-  background-color: #ffffff; 
-  padding: 20px;
-  max-width: 800px;
-  border-radius: 20px;
-  
+.wardrobe-cabinet-collage, .bed-frame-collage, .media-console-collage, .loft-bed-collage, .kitchen-renovation-collage, .under-stair-storage-collage, .tile-stone-collage, .metal-roof-collage, .sauna-collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    flex-grow: 2;
+}
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+.wardrobe-cabinet-collage img:first-child, .media-console-collage img:first-child, .kitchen-renovation-collage img:first-child, .tile-stone-collage img:first-child, .sauna-collage img:first-child {
+    grid-column: span 2;
+    aspect-ratio: 4 / 3;
 }
 
 
-.proj-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.proj-img img:hover {
-  transform: scale(1.1);
-  z-index: 100 !important;
-  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
+.bed-frame-collage img:last-child, .loft-bed-collage img:last-child, .under-stair-storage-collage img:last-child, .metal-roof-collage img:last-child {
+    grid-column: span 2;
+    aspect-ratio: 4 / 3;
 }
 
 
-@media (max-width: 768px) {
+.bistro-office-collage, .kiosk-cart-collage {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    flex-grow: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .project-wrapper {
+        padding: 10px 10px;
+    }
+
+    .project-section {
+        padding: 20px;
+    }
     
-    .projects {
-        width: 92%;
-        margin: 20px auto;
-        padding: 15px;
-        border-radius: 15px;
-    }
-
-    .section-title {
-        text-align: center;
-        font-size: 1.4rem;
-        padding-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .project-pics {
+    .project-content1, .project-content2 {
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 10px;
     }
 
-    .proj-img img {
-        border-radius: 10px;
+    .wardrobe-cabinet-collage, .bed-frame-collage, .media-console-collage, .loft-bed-collage, .kitchen-renovation-collage, .under-stair-storage-collage, .tile-stone-collage, .metal-roof-collage, .sauna-collage,.bistro-office-collage, .kiosk-cart-collage {
+        grid-template-columns: 1fr;
     }
 
-    .proj-img img:hover {
-        transform: none;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    .wardrobe-cabinet-collage img:first-child, .media-console-collage img:first-child, .kitchen-renovation-collage img:first-child, .tile-stone-collage img:first-child, .sauna-collage img:first-child {
+        grid-column: span 1;
+        aspect-ratio: 4 / 3;
     }
 
-    footer {
+    .bed-frame-collage img:last-child, .loft-bed-collage img:last-child, .under-stair-storage-collage img:last-child, .metal-roof-collage img:last-child {
+        grid-column: span 1;
+        aspect-ratio: 4 / 3;
+    }
+
+    .project-section h2 {
+        font-size: 36px;
+    }
+    
+    .project-item p {
+        font-size: 26px;
+    }
+
+    /* footer {
         flex-direction: column;
         align-items: center;
         gap: 20px;
@@ -130,5 +192,15 @@ body{
         font-size: 15px;
         justify-content: center;
         width: 100%;
+    } */
+}
+
+@media screen and (max-width: 425px) {
+    .project-section h2 {
+        font-size: 28px;
+    }
+
+    .project-item p {
+        font-size: 20px;
     }
 }
