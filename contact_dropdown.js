@@ -1,4 +1,3 @@
-// Sample location dataset mapping Regions -> Provinces -> Cities
 const locationData = {
     "NCR": {
         hasProvince: false,
@@ -27,11 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const provinceWrapper = document.getElementById("provinceWrapper");
     const cityWrapper = document.getElementById("cityWrapper");
 
-    // 1. Handle Region Dropdown Adjustments
+
     regionSelect.addEventListener("change", function() {
         const selectedRegion = this.value;
         
-        // Wipe and reset downstream fields
+
         resetSelect(provinceSelect, "-- Choose Province --");
         resetSelect(citySelect, "-- Choose City/Municipality --");
         
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = locationData[selectedRegion];
             
             if (data.hasProvince) {
-                // If the region requires a province tier, unhide it
+  
                 provinceWrapper.style.display = "block";
                 provinceSelect.required = true;
                 
@@ -55,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     provinceSelect.appendChild(opt);
                 });
             } else {
-                // No Province needed (e.g., NCR) -> Jump straight to Cities list
+
                 cityWrapper.style.display = "block";
                 citySelect.required = true;
                 
@@ -69,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 2. Handle Province Dropdown Adjustments
+
     provinceSelect.addEventListener("change", function() {
         const selectedRegion = regionSelect.value;
         const selectedProvince = this.value;
@@ -92,12 +91,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Clean out choices helper function
+
     function resetSelect(selectElement, defaultText) {
         selectElement.innerHTML = `<option value="" disabled selected>${defaultText}</option>`;
     }
 
-    // --- Keep your existing code (like the 'Other Services' checkbox toggler) here ---
+
     const otherServices = document.getElementById("otherServices");
     const otherText = document.getElementById("otherText");
     if (otherServices && otherText) {
