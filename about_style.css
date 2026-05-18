@@ -13,6 +13,11 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* Background by SVGBackgrounds.com */
 body{
     background-color: #FFFFFF;
@@ -52,6 +57,7 @@ body{
 
 .about-text {
     background-color: #fcd0b5;
+    border: 3px solid #ffa987;
     padding: 20px;
     border-radius: 12px;
     line-height: 1.5;
@@ -135,6 +141,10 @@ hr {
     line-height: 1.5;
 }
 
+#process, #accomplishments, #feedbacks {
+    scroll-margin-top: 90px;
+}
+
 .process-wrapper, .accomplishments-wrapper, .feedback-wrapper {
     display: flex;
     align-items: center;
@@ -150,6 +160,7 @@ hr {
 }
 
 .process-section, .accomplishments-section, .feedback-section {
+    border: 3px solid #ffa987;
     background-color: #fcd0b5;
     padding: 40px;
     border-radius: 12px;
@@ -278,6 +289,34 @@ hr {
 .feedback-group1-mobile, .feedback-group2-mobile {
     display: none;
 }
+
+
+.button {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#back-to-top {
+    padding: 25px 30px;
+    background-color: #F6985F;
+    color: white;
+    font-size: 20px;
+    border-radius: 70px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+#back-to-top:hover {
+    background-color: #D26E43;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 15px 20px 40px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
 
 
 @media (min-width: 769px) and (max-width: 1024px) {

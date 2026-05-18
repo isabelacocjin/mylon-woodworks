@@ -10,25 +10,50 @@
     <link rel="stylesheet" href="footer_style.css">
     <script src="https://kit.fontawesome.com/eb58d2605a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image" href="images/logo-no-text.png">
+    <script src="features_videos.js" defer></script>
 
 </head>
-<body>
+<body id="top">
 
     <header class="main-navbar">
         <div class="container-nav">
             <div class="navdiv">
                 <div class="logo"><a href="./index.html">MYLON WOODWORKS</a></div>
                     <ul>
-                        <li><a href="./index.html">HOME</a></li>
-                        <li><a href="./about.html">ABOUT</a></li>
-                        <li><a href="./features.html">GALLERY</a></li>
-                        <li><a href="./contact.html">CONTACT</a></li>
+                            <li><a href="./index.html">HOME</a></li>
+                        
+                            <li class="hover-dropdown">
+                                <a href="./about.html#top">ABOUT</a>
+                                    <ul class="dropdown-content">
+                                        <li><a href="./about.html#process">Our Process</a></li>
+                                        <li><a href="./about.html#accomplishments">Notable Accomplishments</a></li>
+                                        <li><a href="./about.html#feedbacks">Client Feedbacks</a></li>
+                                    </ul>
+                            </li>
+
+                            <li class="hover-dropdown">
+                                <a href="./features.html#top">GALLERY</a>
+                                    <ul class="dropdown-content">
+                                        <li><a href="./features.html#videos">Videos</a></li>
+                                        <li><a href="./features.html#materials">Materials Used</a></li>
+
+                                    </ul>
+                            </li>
+
+                            <li class="hover-dropdown">
+                                <a href="./contact.html#top">CONTACT</a>
+                                    <ul class="dropdown-content">
+                                        <li><a href="./contact.html#send-message">Send Us A Message</a></li>
+                                    </ul>
+                            </li>
+
+                        
                     </ul>
             </div>
         </div>
     </header>
 
-        <div class="project-wrapper">
+    <div class="feature-wrapper">
         <div class="project-container">
             <div class="project-section">
                 <h2>Features & Projects</h2>
@@ -140,13 +165,106 @@
                 </div>
             </div>
         </div>
+
+        <div class="video-container">
+            <div class="video-section">
+                <h2 id="videos">Videos</h2>
+                <div class="video-content1">
+                    <div class="video-item">
+                        <video id="reels" controls autoplay muted>
+                        <source src="videos/video-1.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                        </video>
+                    </div>
+                </div>
+                <div class="video-content2">
+                    <h2 id="materials">Materials Used</h2>
+                    <div class="project-material">
+                        <p>Wood Options:</p>
+                        <ul>
+                            <li>Marine Plywood</li>
+                            <li>Plyboard</li>
+                            <li>Solid Wood Planks</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-material">
+                        <p>Wood Finishing Options:</p>
+                        <ul>
+                            <li>Duco Paint Finish</li>
+                            <li>Semi-Duco Paint Finish</li>
+                            <li>Laminated Wood Finish</li>
+                            <li>Microcement Finish</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-material">
+                        <p>Kitchen/Bathroom Countertop & Backsplash Options:</p>
+                        <ul>
+                            <li>Stone (Granite, Marble, Quarts)</li>
+                            <li>Tiles</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-material">
+                        <p>Flooring Options:</p>
+                        <ul>
+                            <li>Tiles</li>
+                            <li>Wood Planks</li>
+                            <li>Vinyl Planks</li>
+                            <li>Sealed Concrete</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-material">
+                        <p>Walls Finishing Options:</p>
+                        <ul>
+                            <li>Smooth Paint Finish</li>
+                            <li>Textured Paint Finish</li>
+                            <li>Microcement Finish</li>
+                            <li>Limewash Finish</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-material">
+                        <p>Ceiling Options:</p>
+                        <ul>
+                            <li>Gypsum Board</li>
+                            <li>HardiFlex</li>
+                            <li>PVC ceiling panels</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-material">
+                        <p>Roofing Options:</p>
+                        <ul>
+                            <li>Longspan Roofing</li>
+                            <li>Polycarbonate Roofing Sheets</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-material">
+                        <p>Other Materials Used for Various Projects:</p>
+                        <ul>
+                            <li>Roof Sealants & Coatings</li>
+                            <li>Concrete Waterproof Coating</li>
+                            <li>Negative Waterproof Coating</li>
+                            <li>PPR pipes</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
 
 
-    
+    <div class="button">
+    <a href="#top" type="button" id="back-to-top">Back to Top ↑ </a>
+    </div>
     
         <footer class="footer">
     <div class="footer-top">
@@ -157,10 +275,10 @@
         </div>
 
         <div class="footer-links">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#gallery">GALLERY</a>
-            <a href="#contact">CONTACT</a>
+            <a href="./index.html">HOME</a>
+            <a href="./about.html">ABOUT</a>
+            <a href="#top">GALLERY</a>
+            <a href="./contact.html">CONTACT</a>
         </div>
 
     </div>

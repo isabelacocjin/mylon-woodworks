@@ -12,17 +12,41 @@
     <link rel="icon" type="image" href="images/logo-no-text.png">
     <script src="about_toggles_mobile.js" defer></script>
 </head>
-<body>
+<body id="top">
 
     <header class="main-navbar">
         <div class="container-nav">
             <div class="navdiv">
                 <div class="logo"><a href="./index.html">MYLON WOODWORKS</a></div>
                     <ul>
-                        <li><a href="./index.html">HOME</a></li>
-                        <li><a href="./about.html">ABOUT</a></li>
-                        <li><a href="./features.html">GALLERY</a></li>
-                        <li><a href="./contact.html">CONTACT</a></li>
+                            <li><a href="./index.html">HOME</a></li>
+                        
+                            <li class="hover-dropdown">
+                                <a href="./about.html#top">ABOUT</a>
+                                    <ul class="dropdown-content">
+                                        <li><a href="./about.html#process">Our Process</a></li>
+                                        <li><a href="./about.html#accomplishments">Notable Accomplishments</a></li>
+                                        <li><a href="./about.html#feedbacks">Client Feedbacks</a></li>
+                                    </ul>
+                            </li>
+
+                            <li class="hover-dropdown">
+                                <a href="./features.html#top">GALLERY</a>
+                                    <ul class="dropdown-content">
+                                        <li><a href="./features.html#videos">Videos</a></li>
+                                        <li><a href="./features.html#materials">Materials Used</a></li>
+
+                                    </ul>
+                            </li>
+
+                            <li class="hover-dropdown">
+                                <a href="./contact.html#top">CONTACT</a>
+                                    <ul class="dropdown-content">
+                                        <li><a href="./contact.html#send-message">Send Us A Message</a></li>
+                                    </ul>
+                            </li>
+
+                        
                     </ul>
             </div>
         </div>
@@ -68,7 +92,7 @@
     <div class="process-wrapper">
         <div class="process-container">
             <div class="process-section">
-                <h2>Our Process</h2>
+                <h2 id="process">Our Process</h2>
                     <div class="process-image">
                         <img src="images/process.png" alt="Progress Diagram">
                     </div>
@@ -82,7 +106,7 @@
     <div class="accomplishments-wrapper">
         <div class="accomplishments-container">
             <div class="accomplishments-section">
-                <h2>Notable Accomplishments</h2>
+                <h2 id="accomplishments">Notable Accomplishments</h2>
                     <div class="accomplishment-content">
                         <div class="accomplishment-item">
                         <p>
@@ -107,7 +131,7 @@
 
                         <!--FOR MOBILE-->
                         <div class="accomplishment-collage2-mobile">
-                        <img src="images/accomplishments/acommplisment-2.2.png" alt="Accomplishments Collage 2.1">
+                        <img src="images/accomplishments/acommplisment-2.1.png" alt="Accomplishments Collage 2.1">
                         <img src="images/accomplishments/acommplisment-2.2-mobile.jpg" alt="Accomplishments Collage 2.2">
                         </div>
                         </div>
@@ -131,7 +155,7 @@
     <div class="feedback-wrapper">
         <div class="feedback-container">
             <div class="feedback-section">
-                <h2>Client Feedbacks</h2>
+                <h2 id="feedbacks">Client Feedbacks</h2>
                     <div class="feedback-content">
                         <div class="feedback-group1">
                         <img src="images/feedbacks/feedback1.jpg" alt="Feedback 1">
@@ -165,6 +189,10 @@
         </div>
     </div>
 
+    <div class="button">
+    <a href="#top" type="button" id="back-to-top">Back to Top ↑ </a>
+    </div>
+
 <footer class="footer">
     <div class="footer-top">
 
@@ -174,10 +202,10 @@
         </div>
 
         <div class="footer-links">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#gallery">GALLERY</a>
-            <a href="#contact">CONTACT</a>
+            <a href="./index.html">HOME</a>
+            <a href="#top">ABOUT</a>
+            <a href="./features.html">GALLERY</a>
+            <a href="./contact.html">CONTACT</a>
         </div>
 
     </div>

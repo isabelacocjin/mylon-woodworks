@@ -11,19 +11,44 @@
     <script src="https://kit.fontawesome.com/eb58d2605a.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image" href="images/logo-no-text.png">
     <script src="contact_form.js" defer></script>
+    <script src="contact_dropdown.js" defer></script>
 
 </head>
-<body class="contact-page">
+<body id="top">
 
     <header class="main-navbar">
         <div class="container-nav">
             <div class="navdiv">
                 <div class="logo"><a href="./index.html">MYLON WOODWORKS</a></div>
                     <ul>
-                        <li><a href="./index.html">HOME</a></li>
-                        <li><a href="./about.html">ABOUT</a></li>
-                        <li><a href="./features.html">GALLERY</a></li>
-                        <li><a href="./contact.html">CONTACT</a></li>
+                            <li><a href="./index.html">HOME</a></li>
+                        
+                            <li class="hover-dropdown">
+                                <a href="./about.html#top">ABOUT</a>
+                                    <ul class="dropdown-content">
+                                        <li><a href="./about.html#process">Our Process</a></li>
+                                        <li><a href="./about.html#accomplishments">Notable Accomplishments</a></li>
+                                        <li><a href="./about.html#feedbacks">Client Feedbacks</a></li>
+                                    </ul>
+                            </li>
+
+                            <li class="hover-dropdown">
+                                <a href="./features.html#top">GALLERY</a>
+                                    <ul class="dropdown-content">
+                                        <li><a href="./features.html#videos">Videos</a></li>
+                                        <li><a href="./features.html#materials">Materials Used</a></li>
+
+                                    </ul>
+                            </li>
+
+                            <li class="hover-dropdown">
+                                <a href="./contact.html#top">CONTACT</a>
+                                    <ul class="dropdown-content">
+                                        <li><a href="./contact.html#send-message">Send Us A Message</a></li>
+                                    </ul>
+                            </li>
+
+                        
                     </ul>
             </div>
         </div>
@@ -90,7 +115,8 @@
     <!-- FORM SECTION -->
     <div class="contact-form-wrapper">
 
-        <h3 class="header">Send Us a Message</h3>
+        <div id="send-message"></div>
+        <h3 class="message-header">Send Us a Message</h3>
 
         <div class="contact-form">
             <form>
@@ -132,8 +158,56 @@
                             placeholder="Please specify other service"
                             style="display: none; margin-top: 10px;"
                         >
+                        
 
                 </div>
+                <div class="appointment-section">
+
+    <p class="appointment-booking">Book an Appointment</p>
+
+    <label for="appointmentDate">Select Date</label>
+    <input type="date" id="appointmentDate" required>
+
+    <label for="appointmentTime">Select Time</label>
+    <input type="time" id="appointmentTime" required>
+
+                    <!-- NEW LOCATION SELECTION DROPDOWNS -->
+            <div class="form-group mt-3">
+                <label for="regionSelect">Select Region</label>
+                <select id="regionSelect" class="form-control" required>
+                    <option value="" disabled selected>-- Choose Region --</option>
+                    <option value="NCR">National Capital Region (NCR)</option>
+                    <option value="Region4A">CALABARZON (Region IV-A)</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="provinceWrapper" style="display: none;">
+                <label for="provinceSelect">Select Province</label>
+                <select id="provinceSelect" class="form-control">
+                    <option value="" disabled selected>-- Choose Province --</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="cityWrapper" style="display: none;">
+                <label for="citySelect">Select City/Municipality</label>
+                <select id="citySelect" class="form-control">
+                    <option value="" disabled selected>-- Choose City/Municipality --</option>
+                </select>
+            </div>
+            <!-- END OF LOCATION SELECTION DROPDOWNS -->
+    <label for="addressLine">Enter Address</label>
+    <input type="text" id="addressLine" placeholder="Address (Unit/Floor, Building, Street, Barangay)" required>
+
+    <label for="zipInput">Enter ZIP Code</label>
+    <input type="text" id="zipInput" maxlength="4" inputmode="numeric" pattern="[0-9]{4}" placeholder="ZIP Code" required>
+
+    <textarea 
+        id="appointmentNotes"
+        rows="4"
+        placeholder="Additional notes or preferred meeting details">
+    </textarea>
+
+</div>
 
                 <button type="submit">Send</button>
 
@@ -145,27 +219,13 @@
 </div>
 
 <!-- APPOINTMENT SECTION -->
-<div class="appointment-section">
 
-    <p class="project-title">Book an Appointment</p>
-
-    <label for="appointmentDate">Select Date</label>
-    <input type="date" id="appointmentDate" required>
-
-    <label for="appointmentTime">Select Time</label>
-    <input type="time" id="appointmentTime" required>
-
-    <textarea 
-        id="appointmentNotes"
-        rows="4"
-        placeholder="Additional notes or preferred meeting details">
-    </textarea>
-
-</div>
 
         
     
-
+<div class="button">
+    <a href="#top" type="button" id="back-to-top">Back to Top ↑ </a>
+    </div>
         
 </body>
 </html>

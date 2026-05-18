@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-padding-top: 90px; 
+    scroll-behavior: smooth; 
+}
+
 .main-navbar a:hover {
     text-decoration: none;
     color: #d46a3a;
@@ -57,12 +64,12 @@ body{
     list-style: none;
 
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     gap: 20px;
 
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
 }
 
 .logo a{
@@ -124,6 +131,65 @@ li a{
     padding: 5px 40px;
 }
 
+.hover-dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0 !important;    
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fcd0b5;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-top: 5px !important;
+    padding: 8px 0 !important;
+    z-index: 1001;   
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; 
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.hover-dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.dropdown-content li {
+    width: 100%;
+    display: block;
+}
+
+.dropdown-content li a {
+    color: #d46a3a !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 650;
+    font-size: 15px !important;
+    padding: 10px 20px;
+    display: block;
+    margin-right: 0 !important;
+    width: 100%;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #fbf3ef;
+    color: #F97B79 !important;
+}
+
+.dropdown-content li a::after {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
 
     .navdiv {
@@ -144,7 +210,7 @@ li a{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 8.9px;
+      gap: 25px;
     }
 
     li {
@@ -165,5 +231,15 @@ li a{
         background-size: 80px;
         background-position: center;
         opacity: 0;
+    }
+
+    .hover-dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+@media (max-width: 430px) {
+    .navdiv ul {
+      gap: 12px;
     }
 }

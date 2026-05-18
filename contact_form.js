@@ -64,3 +64,23 @@ const minDate = `${year}-${month}-${day}`;
 
 // Prevent selecting past dates
 appointmentDate.min = minDate;
+
+const appointmentNotes = document.getElementById("appointmentNotes"); 
+appointmentNotes.value = "";
+
+
+const zipInput = document.getElementById('zipInput');
+
+zipInput.addEventListener('keydown', (e) => {
+  // Allow control keys (Backspace, Delete, Tab, Arrows, etc.)
+  const allowedKeys = ['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight', 'Home', 'End'];
+  
+  if (allowedKeys.includes(e.key)) {
+    return;
+  }
+
+  // Block the keypress if it's not a number between 0 and 9
+  if (!/^[0-9]$/.test(e.key)) {
+    e.preventDefault();
+  }
+});
